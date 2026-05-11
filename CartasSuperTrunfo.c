@@ -95,10 +95,8 @@ int main() {
 
   // Calculo do Super Poder, é a soma de todos os atributos da carta, porém no
   // lugar da densidade populacional é usado o inverso da densidade populacional
-  super_poder_1 = populacao_1 + area_1 + pib_1 + pontos_turisticos_1 +
-                  inverso_densidade_populacional_1 + pib_per_capita_1;
-  super_poder_2 = populacao_2 + area_2 + pib_2 + pontos_turisticos_2 +
-                  inverso_densidade_populacional_2 + pib_per_capita_2;
+  super_poder_1 = populacao_1 + area_1 + pib_1 + pontos_turisticos_1 +inverso_densidade_populacional_1 + pib_per_capita_1;
+  super_poder_2 = populacao_2 + area_2 + pib_2 + pontos_turisticos_2 +inverso_densidade_populacional_2 + pib_per_capita_2;
 
   // Apresentação da primeira carta
   printf("Carta %s%s:\n", estado_1, codigo_carta_1);
@@ -157,28 +155,19 @@ int main() {
   area_venceu = area_1 > area_2;
   pib_venceu = pib_1 > pib_2;
   pontos_turisticos_venceu = pontos_turisticos_1 > pontos_turisticos_2;
-  densidade_populacional_venceu =
-      inverso_densidade_populacional_1 < inverso_densidade_populacional_2;
+  densidade_populacional_venceu = inverso_densidade_populacional_1 < inverso_densidade_populacional_2;
   pib_per_capita_venceu = pib_per_capita_1 > pib_per_capita_2;
   super_poder_venceu = super_poder_1 > super_poder_2;
 
   // Resultado do calculo de comparação
 
-  printf("População: %d (%llu Habitantes)\n", populacao_venceu,
-         populacao_venceu ? populacao_1 : populacao_2);
+  printf("População: %d (%llu Habitantes)\n", populacao_venceu, populacao_venceu ? populacao_1 : populacao_2);
   printf("Área: %d (%.2f km²)\n", area_venceu, area_venceu ? area_1 : area_2);
-  printf("PIB: %d (%.2f Bilhões de Reais)\n", pib_venceu,
-         pib_venceu ? pib_1 : pib_2);
-  printf("Pontos turísticos: %d (%d)\n", pontos_turisticos_venceu,
-         pontos_turisticos_venceu ? pontos_turisticos_1 : pontos_turisticos_2);
-  printf("Densidade Populacional: %d (%.2f hab/km²)\n",
-         densidade_populacional_venceu,
-         densidade_populacional_venceu ? densidade_populacional_1
-                                       : densidade_populacional_2);
-  printf("PIB per Capita: %d (%.2f Reais)\n", pib_per_capita_venceu,
-         pib_per_capita_venceu ? pib_per_capita_1 : pib_per_capita_2);
-  printf("Super Poder: %d (Vencedor: %.2f)\n", super_poder_venceu,
-         super_poder_venceu ? super_poder_1 : super_poder_2);
+  printf("PIB: %d (%.2f Bilhões de Reais)\n", pib_venceu, pib_venceu ? pib_1 : pib_2);
+  printf("Pontos turísticos: %d (%d)\n", pontos_turisticos_venceu, pontos_turisticos_venceu ? pontos_turisticos_1 : pontos_turisticos_2);
+  printf("Densidade Populacional: %d (%.2f hab/km²)\n", densidade_populacional_venceu, densidade_populacional_venceu ? densidade_populacional_1 : densidade_populacional_2);
+  printf("PIB per Capita: %d (%.2f Reais)\n", pib_per_capita_venceu,pib_per_capita_venceu ? pib_per_capita_1 : pib_per_capita_2);
+  printf("Super Poder: %d (Vencedor: %.2f)\n", super_poder_venceu, super_poder_venceu ? super_poder_1 : super_poder_2);
 
   // Imprimir quebra de linha em branco segui do de quebra de linha tracejada
   printf("\n");
